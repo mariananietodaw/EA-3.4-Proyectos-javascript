@@ -1,9 +1,28 @@
+/*menu*/
+body {
+    font-family: Arial;
+    text-align: center;
+    background: #222;
+    color: white;
+}
+
+.menu button {
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* ocultar proyectos */
+.oculto {
+    display: none;
+}
+/* ajedrez */
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #222;
+    background-color: #293266;
 }
 
 #tablero {
@@ -26,4 +45,46 @@ body {
 /* pequeño efecto al pasar el ratón */
 .casilla:hover {
     transform: scale(1.05);
+}
+/* JUEGO */
+.game {
+    width: 400px;
+    height: 200px;
+    border: 2px solid white;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+#personaje {
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+    font-size: 30px;
+}
+
+#obstaculo {
+    width: 10px;
+    height: 20px;
+    background: rgb(178, 141, 238);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    animation: mover 2s linear infinite;
+}
+
+/* animación obstáculo */
+@keyframes mover {
+    from { right: -20px; }
+    to { right: 100%; }
+}
+/* salto */
+.saltar {
+    animation: salto 0.5s;
+}
+
+@keyframes salto {
+    0% { bottom: 0; }
+    50% { bottom: 80px; }
+    100% { bottom: 0; }
 }

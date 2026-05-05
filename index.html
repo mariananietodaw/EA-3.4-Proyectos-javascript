@@ -2,17 +2,35 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Tablero de Ajedrez</title>
-    
-    <!-- Enlace al CSS -->
+    <title>Proyectos JS</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div id="tablero"></div>
+<h1>Selecciona un proyecto</h1>
 
-<!-- Enlace al JS -->
+<div class="menu">
+    <button onclick="mostrarProyecto('ajedrez')">Tablero de Ajedrez</button>
+    <button onclick="mostrarProyecto('juego')">Mini Juego</button>
+</div>
+
+<!-- PROYECTO 1 -->
+<div id="ajedrez" class="proyecto">
+    <h2>Tablero de Ajedrez</h2>
+    <div id="tablero"></div>
+</div>
+
+<!-- PROYECTO 2 -->
+<div id="juego" class="proyecto oculto">
+    <h2>bajo el mar</h2>
+    <div class="game">
+        <div id="personaje">🧜🏼‍♀️</div>
+        <div id="obstaculo"></div>
+    </div>
+    <p id="score">Puntos: 0</p>
+    <p id="mensaje"></p>
+</div>
+
 <script src="script.js"></script>
 
 </body>
