@@ -32,7 +32,7 @@ for (let fila = 0; fila < 8; fila++) {
 
         // lógica de colores
         if ((fila + col) % 2 === 0) {
-            casilla.style.backgroundColor = "#ffffff";
+            casilla.style.backgroundColor = "#d0cae7";
         } else {
             casilla.style.backgroundColor = "#575655";
         }
